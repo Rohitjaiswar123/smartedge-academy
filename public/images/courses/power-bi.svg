@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-power-bi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="glow-power-bi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.8" />
+    </linearGradient>
+    <radialGradient id="centerGlow-power-bi" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid-power-bi" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="450" fill="url(#bg-power-bi)" />
+  <rect width="800" height="450" fill="url(#centerGlow-power-bi)" />
+  <rect width="800" height="450" fill="url(#grid-power-bi)" />
+
+  <!-- Geometric Tech Circles -->
+  <circle cx="400" cy="180" r="140" fill="none" stroke="#f59e0b" stroke-opacity="0.15" stroke-width="2" stroke-dasharray="6,8"/>
+  <circle cx="400" cy="180" r="100" fill="none" stroke="#ef4444" stroke-opacity="0.25" stroke-width="2"/>
+  <circle cx="400" cy="180" r="60" fill="rgba(15, 23, 42, 0.85)" stroke="url(#glow-power-bi)" stroke-width="2"/>
+
+  <!-- Glowing Center Badge -->
+  <text x="400" y="188" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">
+    BI
+  </text>
+
+  <!-- Tech Dots / Nodes -->
+  <circle cx="260" cy="180" r="4" fill="#f59e0b" opacity="0.8"/>
+  <line x1="264" y1="180" x2="340" y2="180" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="3,3"/>
+  
+  <circle cx="540" cy="180" r="4" fill="#ef4444" opacity="0.8"/>
+  <line x1="460" y1="180" x2="536" y2="180" stroke="#ef4444" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <circle cx="400" cy="80" r="4" fill="#f59e0b" opacity="0.8"/>
+  <line x1="400" y1="84" x2="400" y2="120" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Card Info Container -->
+  <rect x="80" y="310" width="640" height="95" rx="16" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+  
+  <!-- Title & Subtitle -->
+  <text x="400" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">
+    Power BI &amp; DAX
+  </text>
+  <text x="400" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#94a3b8" text-anchor="middle" letter-spacing="1">
+    Interactive Dashboards • Analytics
+  </text>
+
+  <!-- SmartEdge Watermark Top Left -->
+  <text x="40" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#64748b" letter-spacing="1.5">
+    SMARTEDGE ACADEMY
+  </text>
+
+  <!-- AI Integrated Tag Top Right -->
+  <rect x="630" y="28" width="130" height="26" rx="13" fill="rgba(6, 182, 212, 0.15)" stroke="rgba(6, 182, 212, 0.4)" stroke-width="1"/>
+  <text x="695" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1">
+    AI POWERED
+  </text>
+</svg>

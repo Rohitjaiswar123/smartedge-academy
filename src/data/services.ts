@@ -26,7 +26,7 @@ export const AGENCY_SERVICES: AgencyService[] = [
     tagline: "Turn Your Business Vision into High-Converting iOS & Android Apps",
     iconName: "Smartphone",
     badge: "Flagship Service",
-    heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/services/mobile-app-development.svg",
     deliverables: [
       "Native iOS & Android App Store Readiness",
       "Cross-Platform Codebase (Flutter / React Native)",
@@ -73,7 +73,7 @@ export const AGENCY_SERVICES: AgencyService[] = [
     tagline: "High-Performance Modern Web Platforms, SaaS & Enterprise Portals",
     iconName: "Globe",
     badge: "Enterprise Ready",
-    heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/services/custom-web-development.svg",
     deliverables: [
       "Ultra-fast Server-Side Rendered (Next.js) Web Apps",
       "Custom SaaS Dashboards with Subscription Billing",
@@ -116,7 +116,7 @@ export const AGENCY_SERVICES: AgencyService[] = [
     tagline: "Put Your Business on Autopilot with Cutting-Edge Generative AI Solutions",
     iconName: "Cpu",
     badge: "Most Innovative",
-    heroImage: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/services/ai-automation-agents.svg",
     deliverables: [
       "Autonomous 24/7 AI Customer Support & Sales Agents",
       "Custom Knowledge-Base RAG (Retrieval-Augmented Generation)",
@@ -159,7 +159,7 @@ export const AGENCY_SERVICES: AgencyService[] = [
     tagline: "Eliminate Human Error & Cut Operational Hours by 80%",
     iconName: "Workflow",
     badge: "High ROI",
-    heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/services/enterprise-business-automation.svg",
     deliverables: [
       "Custom Webhook & API Middleware Integrations",
       "WhatsApp Business API Automated Messaging",
@@ -201,7 +201,7 @@ export const AGENCY_SERVICES: AgencyService[] = [
     shortDesc: "Scalable AWS and Google Cloud architecture, automated CI/CD pipelines, Docker containerization, and 99.99% uptime.",
     tagline: "Bulletproof Infrastructure Engineered for Modern Digital Demands",
     iconName: "Cloud",
-    heroImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/services/cloud-devops-consulting.svg",
     deliverables: [
       "AWS & GCP Cloud Architecture Design & Migration",
       "Zero-Downtime CI/CD Pipelines (GitHub Actions / GitLab)",
@@ -243,7 +243,7 @@ export const AGENCY_SERVICES: AgencyService[] = [
     shortDesc: "User-centric UI/UX design, interactive Figma prototypes, and complete brand design systems that captivate and convert.",
     tagline: "Designs that Captivate Users and Drive Measurable Conversions",
     iconName: "Palette",
-    heroImage: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/images/services/ui-ux-design-branding.svg",
     deliverables: [
       "User Persona Research & Journey Mapping",
       "Interactive High-Fidelity Figma Prototypes",

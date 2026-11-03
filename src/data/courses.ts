@@ -76,7 +76,7 @@ export const COURSES: Course[] = [
         answer: "Yes, we provide hands-on classroom training at our Bhiwandi center with dedicated lab infrastructure, as well as hybrid online access."
       }
     ],
-    image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/artificial-intelligence.svg"
   },
   {
     slug: "data-analytics",
@@ -119,7 +119,7 @@ export const COURSES: Course[] = [
         answer: "Absolutely! Many of our successful students come from B.Com, BBA, and Arts backgrounds."
       }
     ],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/data-analytics.svg"
   },
   {
     slug: "data-science",
@@ -162,7 +162,7 @@ export const COURSES: Course[] = [
         answer: "Yes, our dedicated placement cell provides 100% placement assistance, resume polishing, and mock technical rounds."
       }
     ],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/data-science.svg"
   },
   {
     slug: "power-bi",
@@ -204,7 +204,7 @@ export const COURSES: Course[] = [
         answer: "Yes! We prepare you directly for the Microsoft PL-300: Power BI Data Analyst certification."
       }
     ],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/power-bi.svg"
   },
   {
     slug: "sql-developer",
@@ -246,7 +246,7 @@ export const COURSES: Course[] = [
         answer: "Yes, SQL is tested in almost 90% of technical interviews for IT, backend, and data roles."
       }
     ],
-    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/sql-developer.svg"
   },
 
   // SOFTWARE DEVELOPMENT
@@ -291,7 +291,7 @@ export const COURSES: Course[] = [
         answer: "Yes, you will build 4 production projects including a multi-vendor marketplace, a SaaS platform with payments, and an AI chat tool."
       }
     ],
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/full-stack-developer.svg"
   },
   {
     slug: "mern-stack",
@@ -334,7 +334,7 @@ export const COURSES: Course[] = [
         answer: "Yes, thousands of startups and tech companies in Mumbai and India actively hire MERN developers daily."
       }
     ],
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/mern-stack.svg"
   },
   {
     slug: "python-developer",
@@ -376,7 +376,7 @@ export const COURSES: Course[] = [
         answer: "Yes, Python is the friendliest language for beginners, and our mentors provide one-on-one doubt clearing sessions."
       }
     ],
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/python-developer.svg"
   },
   {
     slug: "java-developer",
@@ -418,7 +418,7 @@ export const COURSES: Course[] = [
         answer: "Yes! Top MNCs like TCS, Infosys, Accenture, Cognizant, and JP Morgan have enormous ongoing demand for Java Spring Boot engineers."
       }
     ],
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/java-developer.svg"
   },
   {
     slug: "frontend-developer",
@@ -460,7 +460,7 @@ export const COURSES: Course[] = [
         answer: "No, frontend development evaluates your portfolio and code demos, not your college degree."
       }
     ],
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/frontend-developer.svg"
   },
   {
     slug: "mobile-app-developer",
@@ -502,7 +502,7 @@ export const COURSES: Course[] = [
         answer: "Yes, you will test and run apps directly on your physical Android or iPhone device during class."
       }
     ],
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/mobile-app-developer.svg"
   },
 
   // DIGITAL & AUTOMATION
@@ -547,7 +547,7 @@ export const COURSES: Course[] = [
         answer: "Yes! We run real ad campaigns in class so you gain authentic experience managing live ad spends."
       }
     ],
-    image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/digital-marketing-ai.svg"
   },
   {
     slug: "business-automation",
@@ -589,7 +589,7 @@ export const COURSES: Course[] = [
         answer: "Yes, many graduates launch their own AI automation agencies (AAA) serving local and international businesses."
       }
     ],
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/business-automation.svg"
   },
   {
     slug: "rpa-developer",
@@ -631,7 +631,7 @@ export const COURSES: Course[] = [
         answer: "Yes, banking, insurance, healthcare, and IT service providers hire RPA specialists for process automation."
       }
     ],
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/rpa-developer.svg"
   },
   {
     slug: "cloud-devops",
@@ -674,7 +674,7 @@ export const COURSES: Course[] = [
         answer: "Yes, you practice with real AWS cloud consoles and deploy live production containers during every practical module."
       }
     ],
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/cloud-devops.svg"
   },
   {
     slug: "graphic-designing",
@@ -716,6 +716,6 @@ export const COURSES: Course[] = [
         answer: "No drawing skills required! Graphic design is about problem solving, layout, typography, and software proficiency."
       }
     ],
-    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/courses/graphic-designing.svg"
   }
 ];

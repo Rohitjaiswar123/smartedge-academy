@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --background: 220 26% 98%;
@@ -34,10 +36,107 @@ html {
 }
 
 body {
-  background-color: #0b1120;
-  color: #f1f5f9;
   min-height: 100vh;
   overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Light mode adjustments */
+html:not(.dark) {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Base Light Mode utility mappings */
+html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Backgrounds in Light Mode */
+html:not(.dark) .bg-slate-950 {
+  background-color: #f8fafc;
+}
+
+html:not(.dark) .bg-slate-900 {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+html:not(.dark) .bg-slate-900\/40,
+html:not(.dark) .bg-slate-900\/50,
+html:not(.dark) .bg-slate-900\/60,
+html:not(.dark) .bg-slate-900\/80,
+html:not(.dark) .bg-slate-900\/90 {
+  background-color: #ffffff;
+}
+
+html:not(.dark) .bg-slate-900\/98 {
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+html:not(.dark) .bg-slate-950\/70,
+html:not(.dark) .bg-slate-950\/80,
+html:not(.dark) .bg-slate-950\/90,
+html:not(.dark) .bg-slate-950\/95 {
+  background-color: #f1f5f9;
+}
+
+html:not(.dark) .bg-slate-800 {
+  background-color: #f1f5f9;
+}
+
+html:not(.dark) .bg-slate-800\/80,
+html:not(.dark) .bg-slate-800\/60,
+html:not(.dark) .bg-slate-800\/40 {
+  background-color: #f8fafc;
+}
+
+/* Borders in Light Mode */
+html:not(.dark) .border-slate-800,
+html:not(.dark) .border-slate-800\/80,
+html:not(.dark) .border-slate-800\/50,
+html:not(.dark) .border-slate-800\/40 {
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) .border-slate-700,
+html:not(.dark) .border-slate-700\/80 {
+  border-color: #cbd5e1;
+}
+
+/* Text in Light Mode */
+html:not(.dark) .text-slate-100 {
+  color: #0f172a;
+}
+
+html:not(.dark) .text-slate-200 {
+  color: #1e293b;
+}
+
+html:not(.dark) .text-slate-300 {
+  color: #334155;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #64748b;
+}
+
+/* Form controls in Light Mode */
+html:not(.dark) input.bg-slate-950,
+html:not(.dark) textarea.bg-slate-950,
+html:not(.dark) select.bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) input.bg-slate-950::placeholder,
+html:not(.dark) textarea.bg-slate-950::placeholder {
+  color: #94a3b8 !important;
 }
 
 /* Custom glow utilities */
@@ -45,12 +144,27 @@ body {
   box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.35);
 }
 
+html:not(.dark) .glow-primary {
+  box-shadow: 0 0 40px -10px rgba(37, 99, 235, 0.2);
+}
+
 .glow-card:hover {
   box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.25);
   border-color: rgba(96, 165, 250, 0.4);
 }
 
+html:not(.dark) .glow-card:hover {
+  box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.15);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
 .gradient-text {
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 50%, #4338ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .gradient-text {
   background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #818cf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -67,7 +181,17 @@ body {
     linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
 }
 
+html:not(.dark) .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
 .bg-dots-pattern {
   background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+html:not(.dark) .bg-dots-pattern {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px);
 }

@@ -14,12 +14,13 @@ import {
   Cpu, 
   Database, 
   Smartphone, 
-  ArrowRight,
-  ShieldCheck,
-  CheckCircle2
+  ArrowRight, 
+  ShieldCheck, 
+  CheckCircle2 
 } from "lucide-react";
 import { COURSES } from "@/data/courses";
 import { AGENCY_SERVICES } from "@/data/services";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,15 +47,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full transition-all duration-300">
       {/* Top Bar - High conversion contact line */}
-      <div className="bg-slate-900 border-b border-slate-800 text-xs py-2 px-4 hidden md:block">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-slate-300">
+      <div className="bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 text-xs py-2 px-4 hidden md:block transition-colors">
+        <div className="max-w-7xl mx-auto flex justify-between items-center text-slate-600 dark:text-slate-300">
           <div className="flex items-center space-x-6">
-            <span className="flex items-center gap-1.5 text-blue-400 font-medium">
-              <MapPin className="w-3.5 h-3.5 text-blue-400" />
+            <span className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-medium">
+              <MapPin className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
               1st Floor, Laxmi Ajit Complex, Mubeen Master Rd, Gauripada, Bhiwandi
             </span>
-            <span className="hidden lg:inline text-slate-400">|</span>
-            <span className="hidden lg:inline text-emerald-400 font-medium">
+            <span className="hidden lg:inline text-slate-300 dark:text-slate-600">|</span>
+            <span className="hidden lg:inline text-emerald-600 dark:text-emerald-400 font-medium">
               ⭐ 100% Job Assistance & Live Industry Projects
             </span>
           </div>
@@ -62,17 +63,17 @@ export default function Navbar() {
           <div className="flex items-center space-x-5">
             <a 
               href="tel:+919820624436" 
-              className="flex items-center gap-1 text-slate-200 hover:text-white transition font-semibold"
+              className="flex items-center gap-1 text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white transition font-semibold"
             >
-              <Phone className="w-3.5 h-3.5 text-emerald-400" />
+              <Phone className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
               +91 9820624436
             </a>
-            <span className="text-slate-600">|</span>
+            <span className="text-slate-300 dark:text-slate-600">|</span>
             <a 
               href="https://wa.me/919820624436?text=Hi%20SmartEdge%20Team,%20I%20am%20interested%20in%20courses%20and%20tech%20services"
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-emerald-400 hover:text-emerald-300 font-medium transition"
+              className="text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 font-medium transition"
             >
               WhatsApp Support
             </a>
@@ -84,8 +85,8 @@ export default function Navbar() {
       <nav 
         className={`w-full transition-all duration-200 ${
           scrolled 
-            ? "bg-slate-950/95 backdrop-blur-md shadow-xl border-b border-slate-800/80 py-3" 
-            : "bg-slate-950/80 backdrop-blur-sm border-b border-slate-800/50 py-4"
+            ? "bg-white/95 dark:bg-slate-950/95 backdrop-blur-md shadow-md dark:shadow-xl border-b border-slate-200 dark:border-slate-800/80 py-3" 
+            : "bg-white/80 dark:bg-slate-950/80 backdrop-blur-sm border-b border-slate-200/60 dark:border-slate-800/50 py-4"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -95,10 +96,10 @@ export default function Navbar() {
               <Sparkles className="w-5 h-5 text-white" />
             </div>
             <div>
-              <div className="font-extrabold text-xl tracking-tight text-white flex items-center gap-1">
-                SmartEdge <span className="text-blue-400">Group</span>
+              <div className="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1">
+                SmartEdge <span className="text-blue-600 dark:text-blue-400">Group</span>
               </div>
-              <p className="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">
+              <p className="text-[10px] text-slate-500 dark:text-slate-400 tracking-wider uppercase font-semibold">
                 AI Academy & Tech Solutions
               </p>
             </div>
@@ -108,7 +109,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
             <Link 
               href="/" 
-              className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/60 rounded-lg transition"
+              className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-900/60 rounded-lg transition"
             >
               Home
             </Link>
@@ -120,19 +121,19 @@ export default function Navbar() {
               onMouseLeave={() => setIsCoursesOpen(false)}
             >
               <button 
-                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-200 hover:text-blue-400 rounded-lg transition"
+                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 dark:text-slate-200 dark:hover:text-blue-400 rounded-lg transition"
                 onClick={() => setIsCoursesOpen(!isCoursesOpen)}
               >
                 <span>Academy Courses</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isCoursesOpen ? "rotate-180 text-blue-400" : ""}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isCoursesOpen ? "rotate-180 text-blue-600 dark:text-blue-400" : ""}`} />
               </button>
 
               {/* Mega Dropdown Panel */}
               {isCoursesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[900px] bg-slate-900/98 backdrop-blur-xl border border-slate-700/80 rounded-2xl shadow-2xl p-6 grid grid-cols-3 gap-6 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[900px] bg-white/98 dark:bg-slate-900/98 backdrop-blur-xl border border-slate-200 dark:border-slate-700/80 rounded-2xl shadow-2xl p-6 grid grid-cols-3 gap-6 animate-in fade-in slide-in-from-top-2 duration-150">
                   {/* Column 1: AI & Data */}
                   <div className="space-y-3">
-                    <div className="flex items-center gap-2 pb-2 border-b border-slate-800 text-cyan-400 font-semibold text-sm">
+                    <div className="flex items-center gap-2 pb-2 border-b border-slate-200 dark:border-slate-800 text-cyan-600 dark:text-cyan-400 font-semibold text-sm">
                       <Database className="w-4 h-4" />
                       <span>AI & Data Science</span>
                     </div>
@@ -141,10 +142,10 @@ export default function Navbar() {
                         <li key={course.slug}>
                           <Link 
                             href={`/courses/${course.slug}`}
-                            className="block px-2.5 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-slate-800/80 transition"
+                            className="block px-2.5 py-1.5 rounded-lg text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/80 transition"
                           >
                             <div className="font-medium">{course.title}</div>
-                            <div className="text-[11px] text-slate-400 line-clamp-1">{course.tagline}</div>
+                            <div className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">{course.tagline}</div>
                           </Link>
                         </li>
                       ))}
@@ -153,7 +154,7 @@ export default function Navbar() {
 
                   {/* Column 2: Software Development */}
                   <div className="space-y-3">
-                    <div className="flex items-center gap-2 pb-2 border-b border-slate-800 text-blue-400 font-semibold text-sm">
+                    <div className="flex items-center gap-2 pb-2 border-b border-slate-200 dark:border-slate-800 text-blue-600 dark:text-blue-400 font-semibold text-sm">
                       <Code className="w-4 h-4" />
                       <span>Software Development</span>
                     </div>
@@ -162,17 +163,17 @@ export default function Navbar() {
                         <li key={course.slug}>
                           <Link 
                             href={`/courses/${course.slug}`}
-                            className="block px-2.5 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-slate-800/80 transition"
+                            className="block px-2.5 py-1.5 rounded-lg text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/80 transition"
                           >
                             <div className="font-medium">{course.title}</div>
-                            <div className="text-[11px] text-slate-400 line-clamp-1">{course.tagline}</div>
+                            <div className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">{course.tagline}</div>
                           </Link>
                         </li>
                       ))}
                       <li>
                         <Link 
                           href="/courses" 
-                          className="text-xs text-blue-400 hover:underline px-2.5 pt-1 block font-medium"
+                          className="text-xs text-blue-600 dark:text-blue-400 hover:underline px-2.5 pt-1 block font-medium"
                         >
                           View all software courses →
                         </Link>
@@ -182,7 +183,7 @@ export default function Navbar() {
 
                   {/* Column 3: Digital & Automation */}
                   <div className="space-y-3">
-                    <div className="flex items-center gap-2 pb-2 border-b border-slate-800 text-emerald-400 font-semibold text-sm">
+                    <div className="flex items-center gap-2 pb-2 border-b border-slate-200 dark:border-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold text-sm">
                       <Cpu className="w-4 h-4" />
                       <span>Digital & Automation</span>
                     </div>
@@ -191,22 +192,22 @@ export default function Navbar() {
                         <li key={course.slug}>
                           <Link 
                             href={`/courses/${course.slug}`}
-                            className="block px-2.5 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-slate-800/80 transition"
+                            className="block px-2.5 py-1.5 rounded-lg text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/80 transition"
                           >
                             <div className="font-medium">{course.title}</div>
-                            <div className="text-[11px] text-slate-400 line-clamp-1">{course.tagline}</div>
+                            <div className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">{course.tagline}</div>
                           </Link>
                         </li>
                       ))}
                     </ul>
 
                     {/* Bottom Promo Box in Mega Menu */}
-                    <div className="mt-4 p-3 rounded-xl bg-gradient-to-r from-blue-950/60 to-cyan-950/60 border border-blue-800/40">
-                      <div className="text-xs font-semibold text-white flex items-center gap-1.5">
-                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                    <div className="mt-4 p-3 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/60 dark:to-cyan-950/60 border border-blue-200 dark:border-blue-800/40">
+                      <div className="text-xs font-semibold text-slate-900 dark:text-white flex items-center gap-1.5">
+                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                         100% Job Placement Assistance
                       </div>
-                      <p className="text-[11px] text-slate-400 mt-1">
+                      <p className="text-[11px] text-slate-600 dark:text-slate-400 mt-1">
                         Resume building, mock interviews, and direct referrals to top tech companies.
                       </p>
                     </div>
@@ -222,40 +223,40 @@ export default function Navbar() {
               onMouseLeave={() => setIsServicesOpen(false)}
             >
               <button 
-                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-200 hover:text-cyan-400 rounded-lg transition"
+                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-700 hover:text-cyan-600 dark:text-slate-200 dark:hover:text-cyan-400 rounded-lg transition"
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
               >
                 <span>We Build: Apps & AI</span>
-                <span className="text-[10px] bg-cyan-500/20 text-cyan-300 px-1.5 py-0.5 rounded font-semibold">
+                <span className="text-[10px] bg-cyan-500/10 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-300 px-1.5 py-0.5 rounded font-semibold">
                   Agency
                 </span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180 text-cyan-400" : ""}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180 text-cyan-600 dark:text-cyan-400" : ""}`} />
               </button>
 
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-1 w-80 bg-slate-900/98 backdrop-blur-xl border border-slate-700/80 rounded-2xl shadow-2xl p-4 space-y-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
-                  <div className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-400 border-b border-slate-800">
+                <div className="absolute top-full left-0 mt-1 w-80 bg-white/98 dark:bg-slate-900/98 backdrop-blur-xl border border-slate-200 dark:border-slate-700/80 rounded-2xl shadow-2xl p-4 space-y-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
+                  <div className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800">
                     Client Engineering Services
                   </div>
                   {AGENCY_SERVICES.map((service) => (
                     <Link
                       key={service.slug}
                       href={`/services/${service.slug}`}
-                      className="block px-3 py-2.5 rounded-xl hover:bg-slate-800/90 text-slate-300 hover:text-white transition group"
+                      className="block px-3 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/90 text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition group"
                     >
-                      <div className="text-xs font-semibold group-hover:text-cyan-300 transition flex items-center justify-between">
+                      <div className="text-xs font-semibold group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition flex items-center justify-between">
                         {service.title}
                         <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
-                      <div className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">
+                      <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 line-clamp-1">
                         {service.shortDesc}
                       </div>
                     </Link>
                   ))}
-                  <div className="pt-2 border-t border-slate-800">
+                  <div className="pt-2 border-t border-slate-200 dark:border-slate-800">
                     <Link 
                       href="/services" 
-                      className="block text-center text-xs font-semibold text-cyan-400 hover:text-cyan-300 py-1"
+                      className="block text-center text-xs font-semibold text-cyan-600 hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300 py-1"
                     >
                       Explore All Agency Services →
                     </Link>
@@ -266,22 +267,22 @@ export default function Navbar() {
 
             <Link 
               href="/placements" 
-              className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/60 rounded-lg transition flex items-center gap-1.5"
+              className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-900/60 rounded-lg transition flex items-center gap-1.5"
             >
-              <Briefcase className="w-3.5 h-3.5 text-emerald-400" />
+              <Briefcase className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
               Placements
             </Link>
 
             <Link 
               href="/about" 
-              className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/60 rounded-lg transition"
+              className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-900/60 rounded-lg transition"
             >
               About
             </Link>
 
             <Link 
               href="/contact" 
-              className="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/60 rounded-lg transition"
+              className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-900/60 rounded-lg transition"
             >
               Contact
             </Link>
@@ -289,11 +290,14 @@ export default function Navbar() {
 
           {/* Right Action Buttons */}
           <div className="hidden sm:flex items-center space-x-3">
+            {/* Theme Toggle Button */}
+            <ThemeToggle />
+
             <a
               href="tel:+919820624436"
-              className="px-3.5 py-2 text-xs font-semibold rounded-xl border border-slate-700 hover:border-slate-500 text-slate-200 hover:text-white bg-slate-900/60 transition flex items-center gap-1.5"
+              className="px-3.5 py-2 text-xs font-semibold rounded-xl border border-slate-300 hover:border-slate-400 text-slate-700 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 dark:border-slate-700 dark:hover:border-slate-500 dark:text-slate-200 dark:hover:text-white dark:bg-slate-900/60 transition flex items-center gap-1.5"
             >
-              <Phone className="w-3.5 h-3.5 text-emerald-400" />
+              <Phone className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
               Call Now
             </a>
 
@@ -306,11 +310,12 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center">
+          {/* Mobile Right Bar: Theme Toggle & Hamburger */}
+          <div className="lg:hidden flex items-center gap-2">
+            <ThemeToggle size="sm" />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-slate-900 text-slate-300 hover:text-white focus:outline-none"
+              className="p-2 rounded-lg bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 focus:outline-none transition"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -320,18 +325,26 @@ export default function Navbar() {
 
         {/* Mobile Navigation Drawer */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-4 pb-6 space-y-4 max-h-[85vh] overflow-y-auto">
+          <div className="lg:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-4 pb-6 space-y-4 max-h-[85vh] overflow-y-auto transition-colors">
+            {/* Mobile Theme Toggle Row */}
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+              <span className="text-xs font-semibold text-slate-600 dark:text-slate-400">
+                Theme / Appearance
+              </span>
+              <ThemeToggle size="sm" />
+            </div>
+
             <Link 
               href="/" 
               onClick={() => setIsOpen(false)}
-              className="block py-2 text-sm font-semibold text-slate-200"
+              className="block py-2 text-sm font-semibold text-slate-800 dark:text-slate-200"
             >
               Home
             </Link>
 
             {/* Mobile Courses Section */}
-            <div className="border-t border-slate-800 pt-3">
-              <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <div className="border-t border-slate-200 dark:border-slate-800 pt-3">
+              <div className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
                 <Code className="w-3.5 h-3.5" />
                 Academy Courses (Bhiwandi Campus)
               </div>
@@ -341,7 +354,7 @@ export default function Navbar() {
                     key={course.slug}
                     href={`/courses/${course.slug}`}
                     onClick={() => setIsOpen(false)}
-                    className="py-1.5 text-xs text-slate-300 hover:text-white flex items-center gap-2"
+                    className="py-1.5 text-xs text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white flex items-center gap-2"
                   >
                     <CheckCircle2 className="w-3 h-3 text-blue-500" />
                     {course.title}
@@ -350,7 +363,7 @@ export default function Navbar() {
                 <Link
                   href="/courses"
                   onClick={() => setIsOpen(false)}
-                  className="py-2 text-xs font-semibold text-cyan-400"
+                  className="py-2 text-xs font-semibold text-cyan-600 dark:text-cyan-400"
                 >
                   View All 16+ Courses →
                 </Link>
@@ -358,8 +371,8 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Services Section */}
-            <div className="border-t border-slate-800 pt-3">
-              <div className="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <div className="border-t border-slate-200 dark:border-slate-800 pt-3">
+              <div className="text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
                 <Cpu className="w-3.5 h-3.5" />
                 App Development & AI Automation
               </div>
@@ -369,46 +382,46 @@ export default function Navbar() {
                     key={service.slug}
                     href={`/services/${service.slug}`}
                     onClick={() => setIsOpen(false)}
-                    className="py-1.5 text-xs text-slate-300 hover:text-white flex items-center gap-2"
+                    className="py-1.5 text-xs text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white flex items-center gap-2"
                   >
-                    <Smartphone className="w-3 h-3 text-cyan-400" />
+                    <Smartphone className="w-3 h-3 text-cyan-600 dark:text-cyan-400" />
                     {service.title}
                   </Link>
                 ))}
               </div>
             </div>
 
-            <div className="border-t border-slate-800 pt-3 space-y-2">
+            <div className="border-t border-slate-200 dark:border-slate-800 pt-3 space-y-2">
               <Link 
                 href="/placements" 
                 onClick={() => setIsOpen(false)}
-                className="block py-1.5 text-sm font-medium text-slate-200"
+                className="block py-1.5 text-sm font-medium text-slate-800 dark:text-slate-200"
               >
                 100% Job Assistance & Placements
               </Link>
               <Link 
                 href="/about" 
                 onClick={() => setIsOpen(false)}
-                className="block py-1.5 text-sm font-medium text-slate-200"
+                className="block py-1.5 text-sm font-medium text-slate-800 dark:text-slate-200"
               >
                 About SmartEdge Group
               </Link>
               <Link 
                 href="/contact" 
                 onClick={() => setIsOpen(false)}
-                className="block py-1.5 text-sm font-medium text-slate-200"
+                className="block py-1.5 text-sm font-medium text-slate-800 dark:text-slate-200"
               >
                 Contact Us & Bhiwandi Center
               </Link>
             </div>
 
             {/* Mobile Action Buttons */}
-            <div className="pt-4 border-t border-slate-800 flex flex-col gap-2.5">
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2.5">
               <a
                 href="tel:+919820624436"
-                className="w-full py-2.5 text-center text-xs font-semibold rounded-xl bg-slate-800 text-white flex items-center justify-center gap-2"
+                className="w-full py-2.5 text-center text-xs font-semibold rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 flex items-center justify-center gap-2"
               >
-                <Phone className="w-4 h-4 text-emerald-400" />
+                <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                 Call +91 9820624436
               </a>
               <Link

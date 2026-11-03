@@ -1,30 +1,31 @@
 import React from "react";
+import ContactForm from "@/components/ContactForm";
 import { 
+  Sparkles, 
   MapPin, 
   Phone, 
   Mail, 
-  Clock, 
-  MessageSquare, 
-  ShieldCheck, 
-  Navigation, 
-  Sparkles,
-  HelpCircle
+  HelpCircle 
 } from "lucide-react";
-import ContactForm from "@/components/ContactForm";
+
+export const metadata = {
+  title: "Contact SmartEdge Group | Bhiwandi Academy & Software Studio",
+  description: "Get in touch with SmartEdge Academy in Bhiwandi. Call +91 9820624436, visit our Laxmi Ajit Complex campus, or request custom software development."
+};
 
 export default function ContactPage() {
   const faqs = [
     {
       q: "Where is SmartEdge Academy located in Bhiwandi?",
-      a: "We are situated at 1st Floor, Laxmi Ajit Complex, Near Shiv Mandir, Mubeen Master Rd, Opp Curewell Pharmacy, Gauripada Samad Nagar, Bhiwandi 421305. The center is easily accessible by auto and public transport."
+      a: "We are located at 1st Floor, Laxmi Ajit Complex, near Shiv Mandir, Mubeen Master Rd, Opp Curewell Pharmacy, Gauripada, Bhiwandi, Maharashtra 421305. Walk-ins are welcome from 10 AM to 6 PM."
     },
     {
-      q: "How does the 100% Job Assistance work?",
-      a: "Every student who finishes their coursework and capstone project undergoes our 4-pillar placement prep: resume audit, technical drilling, mock interviews, and direct interviews scheduled with our 100+ partner companies until placed."
+      q: "How does the 100% Job Placement Assistance work?",
+      a: "Our placement cell conducts dedicated resume screening, mock technical interviews, LinkedIn/GitHub profile optimization, and schedules direct interview drives with 100+ partner tech firms until you secure an offer letter."
     },
     {
-      q: "Do you offer demo classes before enrollment?",
-      a: "Yes! You can book a free demo session and a 1-on-1 career counseling meeting with our senior instructors before deciding."
+      q: "Are the courses suitable for non-IT and fresh graduates?",
+      a: "Absolutely. All programs begin from absolute zero fundamentals, teaching programming concepts with practical hands-on labs and AI-assisted workflows suitable for students from any academic background."
     },
     {
       q: "Do you also develop custom apps and AI solutions for businesses?",
@@ -33,18 +34,18 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="bg-slate-950 text-slate-100 min-h-screen">
+    <div className="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen transition-colors">
       {/* Header Banner */}
-      <div className="relative border-b border-slate-800 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 py-16 lg:py-20 text-center">
+      <div className="relative border-b border-slate-200 dark:border-slate-800 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 py-16 lg:py-20 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-700 dark:text-blue-400 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             Get in Touch With SmartEdge Group
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
             Let&apos;s Build Your Career or <span className="gradient-text">Your Next Big App</span>
           </h1>
-          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Have questions about courses, 100% job placement, or need custom app and AI automation development? We are ready to assist you.
           </p>
         </div>
@@ -52,12 +53,12 @@ export default function ContactPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Contact Information */}
           <div className="lg:col-span-5 space-y-8">
             <div>
-              <h2 className="text-2xl font-bold text-white mb-2">Bhiwandi Center & Contact Info</h2>
-              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Bhiwandi Center & Contact Info</h2>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 Feel free to call, WhatsApp, or walk in directly during office hours for immediate guidance.
               </p>
             </div>
@@ -65,88 +66,64 @@ export default function ContactPage() {
             {/* Direct Cards */}
             <div className="space-y-4">
               {/* Phone Card */}
-              <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+              <div className="p-5 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 font-medium">Direct Telephone & WhatsApp</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Direct Telephone & WhatsApp</div>
                   <a
                     href="tel:+919820624436"
-                    className="text-lg font-bold text-white hover:text-blue-400 transition"
+                    className="text-lg font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition"
                   >
                     +91 9820624436
                   </a>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
                     Available Mon - Sat, 9:00 AM - 8:00 PM IST
                   </p>
                 </div>
               </div>
 
               {/* Email Card */}
-              <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+              <div className="p-5 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-cyan-50 dark:bg-cyan-500/10 border border-cyan-200 dark:border-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shrink-0">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 font-medium">Email Inquiries</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Admissions & Business Inquiries</div>
                   <a
-                    href="mailto:info@smartedgegroup.in"
-                    className="text-base font-bold text-white hover:text-cyan-400 transition"
+                    href="mailto:contact@smartedgegroup.in"
+                    className="text-base font-bold text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition"
                   >
-                    info@smartedgegroup.in
+                    contact@smartedgegroup.in
                   </a>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
-                    Admissions, partnerships, and client project proposals
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
+                    Fast response within 24 business hours
                   </p>
                 </div>
               </div>
 
               {/* Address Card */}
-              <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 flex items-center justify-center shrink-0">
+              <div className="p-5 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 text-red-500 shrink-0 flex items-center justify-center">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 font-medium">Physical Address</div>
-                  <div className="text-sm font-bold text-white leading-snug mt-0.5">
-                    SmartEdge Academy
-                  </div>
-                  <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                    1st Floor, Laxmi Ajit Complex, Near Shiv Mandir, Mubeen Master Rd, Opp Curewell Pharmacy, Gauripada Samad Nagar, Bhiwandi, Maharashtra 421305
+                  <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Bhiwandi Campus Address</div>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white mt-0.5 leading-snug">
+                    1st Floor, Laxmi Ajit Complex, Mubeen Master Rd, Opp Curewell Pharmacy, Gauripada, Bhiwandi, MH 421305
                   </p>
                   <a
                     href="https://maps.google.com/?q=Laxmi+Ajit+Complex+Bhiwandi"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:underline font-semibold mt-2"
+                    className="inline-block text-xs text-blue-600 dark:text-blue-400 hover:underline mt-2 font-semibold"
                   >
-                    <Navigation className="w-3.5 h-3.5" />
-                    Open in Google Maps
+                    Open in Google Maps →
                   </a>
                 </div>
               </div>
             </div>
-
-            {/* WhatsApp Quick Connect Button */}
-            <div className="p-6 rounded-2xl bg-gradient-to-r from-emerald-950/40 to-slate-900 border border-emerald-500/30 space-y-3">
-              <div className="text-sm font-bold text-white flex items-center gap-2">
-                <MessageSquare className="w-4 h-4 text-emerald-400" />
-                Prefer Instant Chat?
-              </div>
-              <p className="text-xs text-slate-300">
-                Message our counseling team directly on WhatsApp for instant brochure downloads and batch timings.
-              </p>
-              <a
-                href="https://wa.me/919820624436?text=Hello%20SmartEdge%20Team,%20I%20would%20like%20to%20know%20more%20about%20your%20courses%20and%20tech%20services"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white transition flex items-center justify-center gap-2"
-              >
-                Start WhatsApp Chat (+91 9820624436)
-              </a>
-            </div>
-
           </div>
 
           {/* Right Form Column */}
@@ -157,12 +134,12 @@ export default function ContactPage() {
         </div>
 
         {/* FAQs Section */}
-        <div className="mt-24 pt-12 border-t border-slate-800">
+        <div className="mt-24 pt-12 border-t border-slate-200 dark:border-slate-800">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">
               Common Questions Answered
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
               Need more clarification? Here are the most common questions our admissions and solutions team receive.
             </p>
           </div>
@@ -171,13 +148,13 @@ export default function ContactPage() {
             {faqs.map((faq, fidx) => (
               <div
                 key={fidx}
-                className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2"
+                className="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2"
               >
-                <div className="text-sm font-bold text-white flex items-start gap-2">
-                  <HelpCircle className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+                <div className="text-sm font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                  <HelpCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
                   <span>{faq.q}</span>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed pl-6">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed pl-6">
                   {faq.a}
                 </p>
               </div>

@@ -26,7 +26,7 @@ export default function FloatingActions() {
         aria-label="Chat on WhatsApp"
         className="relative group flex items-center"
       >
-        <span className="hidden group-hover:block mr-2 px-3 py-1 text-xs font-semibold text-white bg-slate-900 border border-slate-700 rounded-lg shadow-lg whitespace-nowrap animate-in fade-in duration-150">
+        <span className="hidden group-hover:block mr-2 px-3 py-1 text-xs font-semibold !text-white !bg-slate-900 !border-slate-700 rounded-lg shadow-lg whitespace-nowrap animate-in fade-in duration-150">
           Chat on WhatsApp
         </span>
         <div className="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-xl shadow-emerald-500/40 hover:scale-110 active:scale-95 transition-all duration-200">
