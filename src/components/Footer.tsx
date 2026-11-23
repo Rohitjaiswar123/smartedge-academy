@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { COURSES } from "@/data/courses";
 import { AGENCY_SERVICES } from "@/data/services";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -61,15 +62,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
         {/* Brand Column */}
         <div className="lg:col-span-2 space-y-4">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/20">
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <span className="font-extrabold text-lg text-slate-900 dark:text-white">SmartEdge <span className="text-blue-600 dark:text-blue-400">Group</span></span>
-              <p className="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Bhiwandi Academy & Software Studio</p>
-            </div>
-          </Link>
+          <Logo href="/" />
 
           <p className="text-slate-600 dark:text-slate-400 leading-relaxed pr-4">
             SmartEdge Academy in Bhiwandi is a premier career-focused IT and non-IT training institute offering AI-integrated job skills, live projects, and 100% placement support. Our engineering division builds custom mobile apps, web solutions, and AI automations.

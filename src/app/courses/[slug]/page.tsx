@@ -13,8 +13,14 @@ import {
   Star,
   ShieldCheck
 } from "lucide-react";
-import { COURSES, Course } from "@/data/courses";
+import { COURSES } from "@/data/courses";
 import ContactForm from "@/components/ContactForm";
+import { 
+  getCourseSchema, 
+  getFaqSchema, 
+  getBreadcrumbSchema, 
+  SITE_URL 
+} from "@/lib/jsonld";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -29,11 +35,48 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const course = COURSES.find((c) => c.slug === slug);
-  if (!course) return { title: "Course Not Found" };
+  if (!course) return { title: "Course Not Found | SmartEdge Academy" };
+
+  const title = `${course.title} in Bhiwandi | 100% Job Assistance | SmartEdge Academy`;
+  const description = `${course.tagline} - Learn ${course.tools.slice(0, 4).join(", ")} with hands-on projects, AI workflows, and 100% job placement support in Bhiwandi.`;
+  const pageUrl = `${SITE_URL}/courses/${course.slug}`;
 
   return {
-    title: `${course.title} in Bhiwandi | SmartEdge Academy`,
-    description: `${course.tagline} - Learn with live projects, AI-powered developer workflows, and 100% job placement assistance.`
+    title,
+    description,
+    keywords: [
+      course.title,
+      `${course.title} in Bhiwandi`,
+      `${course.title} course`,
+      `${course.title} training institute`,
+      "IT Training Bhiwandi",
+      "100% Job Assistance",
+      ...course.tools,
+      ...course.careerRoles,
+    ],
+    alternates: {
+      canonical: `/courses/${course.slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "website",
+      images: [
+        {
+          url: "/images/smartedge-logo.png",
+          width: 1200,
+          height: 630,
+          alt: `${course.title} - SmartEdge Academy Bhiwandi`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/smartedge-logo.png"],
+    },
   };
 }
 
@@ -45,8 +88,43 @@ export default async function CourseDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const courseSchema = getCourseSchema(course);
+  const faqSchema = getFaqSchema(course.faqs);
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Courses", url: "/courses" },
+    { name: course.title, url: `/courses/${course.slug}` },
+  ]);
+
   return (
     <div className="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen transition-colors">
+      {/* Structured Data (Schema.org) for SEO, AEO and GEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      {/* Breadcrumb Header */}
+      <div className="border-b border-slate-200 dark:border-slate-800 bg-slate-100/60 dark:bg-slate-900/50 py-3 px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
+          <Link href="/" className="hover:text-blue-600 dark:hover:text-white transition">Home</Link>
+          <span>/</span>
+          <Link href="/courses" className="hover:text-blue-600 dark:hover:text-white transition">Courses</Link>
+          <span>/</span>
+          <span className="text-blue-600 dark:text-blue-400 font-medium truncate">{course.title}</span>
+        </nav>
+      </div>
+
       {/* Hero Header */}
       <div className="relative border-b border-slate-200 dark:border-slate-800 bg-slate-100/70 dark:bg-slate-900/60 py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +185,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
               <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl relative bg-white dark:bg-slate-900">
                 <img
                   src={course.image}
-                  alt={course.title}
+                  alt={`${course.title} training course at SmartEdge Academy Bhiwandi`}
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/20 to-transparent" />
@@ -138,6 +216,40 @@ export default async function CourseDetailPage({ params }: PageProps) {
               <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
                 {course.description}
               </p>
+            </div>
+
+            {/* AEO Fast Facts Summary Table for Answer Engines & Humans */}
+            <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+              <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                Key Course Facts & Highlights (AEO Summary)
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <span className="text-slate-500 dark:text-slate-400 block text-xs">Course Name:</span>
+                  <strong className="text-slate-900 dark:text-white">{course.title}</strong>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <span className="text-slate-500 dark:text-slate-400 block text-xs">Course Duration:</span>
+                  <strong className="text-slate-900 dark:text-white">{course.duration} ({course.level})</strong>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <span className="text-slate-500 dark:text-slate-400 block text-xs">Training Center:</span>
+                  <strong className="text-slate-900 dark:text-white">SmartEdge Campus, Bhiwandi (Classroom + Online)</strong>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <span className="text-slate-500 dark:text-slate-400 block text-xs">Placement Support:</span>
+                  <strong className="text-emerald-600 dark:text-emerald-400">100% Placement Assistance Guarantee</strong>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <span className="text-slate-500 dark:text-slate-400 block text-xs">Salary Potential:</span>
+                  <strong className="text-slate-900 dark:text-white">{course.avgSalary}</strong>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <span className="text-slate-500 dark:text-slate-400 block text-xs">Target Roles:</span>
+                  <strong className="text-slate-900 dark:text-white">{course.careerRoles.slice(0, 2).join(", ")}</strong>
+                </div>
+              </div>
             </div>
 
             {/* AI Advantage Box */}

@@ -3,15 +3,59 @@ import AgencyServicesSection from "@/components/AgencyServicesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactForm from "@/components/ContactForm";
 import { Zap } from "lucide-react";
+import { AGENCY_SERVICES } from "@/data/services";
+import { getBreadcrumbSchema, SITE_URL } from "@/lib/jsonld";
 
 export const metadata = {
   title: "Custom App Development & AI Automation Services | SmartEdge Group",
-  description: "Enterprise software solutions: iOS & Android apps, Next.js web applications, autonomous AI agents, and business workflow automation."
+  description:
+    "Enterprise software studio: Custom iOS & Android mobile apps (Flutter, React Native), Next.js full-stack web applications, autonomous AI agents, and RPA business automations.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Custom App Development & AI Automation Services | SmartEdge Group",
+    description:
+      "Enterprise software solutions: iOS & Android apps, Next.js web applications, autonomous AI agents, and business workflow automation.",
+    url: `${SITE_URL}/services`,
+  },
 };
 
 export default function ServicesPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Engineering Services", url: "/services" },
+  ]);
+
+  const servicesListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "SmartEdge Group Tech Solutions & Engineering Services",
+    description: "Full-cycle software engineering, mobile app development, and AI automation services.",
+    itemListElement: AGENCY_SERVICES.map((s, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: s.title,
+      url: `${SITE_URL}/services/${s.slug}`,
+      description: s.shortDesc,
+    })),
+  };
+
   return (
     <div className="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen transition-colors">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(servicesListSchema),
+        }}
+      />
+
       {/* Header */}
       <div className="relative border-b border-slate-200 dark:border-slate-800 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 py-16 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">

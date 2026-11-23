@@ -1,0 +1,21 @@
+{
+  "name": "SmartEdge Group - AI Academy & Tech Solutions",
+  "short_name": "SmartEdge",
+  "description": "Bhiwandi's AI-Powered Career Academy with 100% Job Assistance and Enterprise Software Solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/images/smartedge-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/smartedge-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

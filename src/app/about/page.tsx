@@ -7,15 +7,67 @@ import {
 } from "lucide-react";
 import BhiwandiCampusSection from "@/components/BhiwandiCampusSection";
 import WhySmartEdge from "@/components/WhySmartEdge";
+import { getBreadcrumbSchema, SITE_URL } from "@/lib/jsonld";
 
 export const metadata = {
   title: "About SmartEdge Group | AI Academy & Software Studio Bhiwandi",
-  description: "Learn about SmartEdge Academy in Bhiwandi, our mission to make students job-ready with AI, and our tech solutions arm building apps and automations."
+  description:
+    "Learn about SmartEdge Academy in Bhiwandi: our mission to make youth job-ready with AI, our 100% placement commitment, and our enterprise software studio.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About SmartEdge Group | AI Academy & Software Studio Bhiwandi",
+    description:
+      "Learn about SmartEdge Academy in Bhiwandi: our mission to make youth job-ready with AI, our 100% placement commitment, and our enterprise software studio.",
+    url: `${SITE_URL}/about`,
+  },
 };
 
 export default function AboutPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "About Us", url: "/about" },
+  ]);
+
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About SmartEdge Group",
+    description:
+      "SmartEdge Group was founded in Bhiwandi to empower students with job-ready AI skills while engineering scalable applications for businesses.",
+    url: `${SITE_URL}/about`,
+    mainEntity: {
+      "@type": "EducationalOrganization",
+      name: "SmartEdge Academy",
+      url: SITE_URL,
+    },
+  };
+
   return (
     <div className="bg-slate-50 dark:bg-slate-950 min-h-screen text-slate-900 dark:text-slate-100 transition-colors">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutSchema),
+        }}
+      />
+
+      {/* Breadcrumb Header */}
+      <div className="border-b border-slate-200 dark:border-slate-800 bg-slate-100/60 dark:bg-slate-900/50 py-3 px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
+          <Link href="/" className="hover:text-blue-600 dark:hover:text-white transition">Home</Link>
+          <span>/</span>
+          <span className="text-blue-600 dark:text-blue-400 font-medium">About Us</span>
+        </nav>
+      </div>
+
       {/* Header */}
       <div className="relative border-b border-slate-200 dark:border-slate-800 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 py-16 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">

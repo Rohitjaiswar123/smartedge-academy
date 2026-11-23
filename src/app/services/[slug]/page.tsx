@@ -6,10 +6,17 @@ import {
   Sparkles, 
   ShieldCheck, 
   HelpCircle,
-  Zap
+  Zap,
+  Cpu
 } from "lucide-react";
 import { AGENCY_SERVICES } from "@/data/services";
 import ContactForm from "@/components/ContactForm";
+import { 
+  getServiceSchema, 
+  getFaqSchema, 
+  getBreadcrumbSchema, 
+  SITE_URL 
+} from "@/lib/jsonld";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -19,6 +26,52 @@ export async function generateStaticParams() {
   return AGENCY_SERVICES.map((s) => ({
     slug: s.slug,
   }));
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params;
+  const service = AGENCY_SERVICES.find((s) => s.slug === slug);
+  if (!service) return { title: "Service Not Found | SmartEdge Group" };
+
+  const title = `${service.title} Services | SmartEdge Group`;
+  const description = `${service.tagline} - ${service.shortDesc} Built with ${service.techStack.slice(0, 4).join(", ")}.`;
+  const pageUrl = `${SITE_URL}/services/${service.slug}`;
+
+  return {
+    title,
+    description,
+    keywords: [
+      service.title,
+      `${service.title} company`,
+      `${service.title} agency`,
+      "Custom Software Development India",
+      "Enterprise Tech Solutions",
+      ...service.techStack,
+    ],
+    alternates: {
+      canonical: `/services/${service.slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "website",
+      images: [
+        {
+          url: "/images/smartedge-logo.png",
+          width: 1200,
+          height: 630,
+          alt: `${service.title} - SmartEdge Group Tech Solutions`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/smartedge-logo.png"],
+    },
+  };
 }
 
 export default async function ServiceDetailPage({
@@ -33,17 +86,41 @@ export default async function ServiceDetailPage({
     notFound();
   }
 
+  const serviceSchema = getServiceSchema(service);
+  const faqSchema = getFaqSchema(service.faqs);
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Engineering Services", url: "/services" },
+    { name: service.title, url: `/services/${service.slug}` },
+  ]);
+
   return (
     <div className="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen transition-colors">
+      {/* Structured Data (Schema.org) for SEO, AEO and GEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Breadcrumb Header */}
       <div className="border-b border-slate-200 dark:border-slate-800 bg-slate-100/60 dark:bg-slate-900/50 py-3 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
+        <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
           <Link href="/" className="hover:text-blue-600 dark:hover:text-white transition">Home</Link>
           <span>/</span>
           <Link href="/services" className="hover:text-blue-600 dark:hover:text-white transition">Engineering Services</Link>
           <span>/</span>
           <span className="text-cyan-700 dark:text-cyan-400 font-medium truncate">{service.title}</span>
-        </div>
+        </nav>
       </div>
 
       {/* Service Hero */}
@@ -87,7 +164,7 @@ export default async function ServiceDetailPage({
               <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl relative bg-white dark:bg-slate-900">
                 <img
                   src={service.heroImage}
-                  alt={service.title}
+                  alt={`${service.title} engineering services by SmartEdge Group`}
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/20 to-transparent" />
@@ -125,6 +202,32 @@ export default async function ServiceDetailPage({
                     <span>{del}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* AEO Capabilities Summary Table for Answer Engines & Technical Evaluators */}
+            <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+              <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <Cpu className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+                Technical Capabilities & Delivery Snapshot (AEO Summary)
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <span className="text-slate-500 dark:text-slate-400 block text-xs">Service Category:</span>
+                  <strong className="text-slate-900 dark:text-white">{service.title}</strong>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <span className="text-slate-500 dark:text-slate-400 block text-xs">Primary Tech Stack:</span>
+                  <strong className="text-slate-900 dark:text-white">{service.techStack.slice(0, 4).join(", ")}</strong>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <span className="text-slate-500 dark:text-slate-400 block text-xs">Code Ownership:</span>
+                  <strong className="text-emerald-600 dark:text-emerald-400">100% Client IP & Source Code Transfer</strong>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <span className="text-slate-500 dark:text-slate-400 block text-xs">Deployment Scope:</span>
+                  <strong className="text-slate-900 dark:text-white">Cloud, iOS, Android & SaaS Production</strong>
+                </div>
               </div>
             </div>
 

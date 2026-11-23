@@ -1,0 +1,46 @@
+# SmartEdge Group (Academy & Software Studio)
+
+> SmartEdge Group is an AI-powered career training academy and custom software engineering studio headquartered in Bhiwandi, Maharashtra, India. The academy specializes in job-ready IT skills with 100% placement assistance, while the software studio builds production-grade mobile applications, SaaS web applications, and autonomous AI automation agents.
+
+## Quick Facts & Canonical Knowledge
+- **Location**: 1st Floor, Laxmi Ajit Complex, near Shiv Mandir, Mubeen Master Rd, Opp Curewell Pharmacy, Gauripada, Bhiwandi, Maharashtra 421305, India.
+- **Geographic Coordinates**: 19.3002° N, 73.0635° E (Bhiwandi, Mumbai MMR, India).
+- **Phone**: +91 9820624436
+- **Email**: contact@smartedgegroup.in / info@smartedgegroup.in
+- **Website**: https://academy.smartedgegroup.in
+- **Key Guarantee**: 100% Job Placement Assistance with resume preparation, mock interviews, and access to 100+ partner tech companies.
+- **Salary Outcomes**: ₹4.5 LPA to ₹16 LPA starting packages for academy graduates.
+- **Instruction Modes**: Offline Classroom in Bhiwandi & Hybrid Live Online.
+
+## Course Programs (Academy)
+- [Artificial Intelligence Master Program](https://academy.smartedgegroup.in/courses/artificial-intelligence): 6 Months. Covers Generative AI, LLMs, LangChain, Neural Networks, PyTorch, Transformers, Autonomous Agents. Salary: ₹6.5 - ₹16 LPA.
+- [Data Analytics & Business Intelligence](https://academy.smartedgegroup.in/courses/data-analytics): 4 Months. Covers Power BI, Advanced Excel, SQL, Python, Pandas, DAX, Business Metrics. Salary: ₹4.5 - ₹10 LPA.
+- [Data Science & Machine Learning](https://academy.smartedgegroup.in/courses/data-science): 6 Months. Covers Scikit-Learn, Predictive Modeling, NLP, Computer Vision, Big Data, Cloud ML. Salary: ₹6 - ₹14 LPA.
+- [Full Stack Web Development](https://academy.smartedgegroup.in/courses/full-stack-developer): 6 Months. Covers MERN Stack (React, Node, Express, MongoDB), Next.js, TypeScript, REST APIs, System Design. Salary: ₹5 - ₹12 LPA.
+- [MERN Stack Developer](https://academy.smartedgegroup.in/courses/mern-stack): 5 Months. Complete JavaScript/TypeScript full-stack specialization. Salary: ₹5 - ₹11 LPA.
+- [Frontend Web Developer](https://academy.smartedgegroup.in/courses/frontend-developer): 4 Months. React, Next.js, Tailwind CSS, Responsive Design, State Management. Salary: ₹4 - ₹8 LPA.
+- [Python Developer Program](https://academy.smartedgegroup.in/courses/python-developer): 4 Months. Core Python, Django, FastAPI, Automation, Web Scraping, Database Integration. Salary: ₹4.5 - ₹9.5 LPA.
+- [Java Developer Masterclass](https://academy.smartedgegroup.in/courses/java-developer): 5 Months. Core Java, Spring Boot, Microservices, Hibernate, REST APIs. Salary: ₹5 - ₹11 LPA.
+- [Mobile App Development](https://academy.smartedgegroup.in/courses/mobile-app-developer): 5 Months. Flutter, React Native, iOS & Android Native integration, App Store publishing. Salary: ₹5 - ₹12 LPA.
+- [Cloud Computing & DevOps](https://academy.smartedgegroup.in/courses/cloud-devops): 5 Months. AWS, Docker, Kubernetes, CI/CD pipelines, Terraform, Linux. Salary: ₹6 - ₹14 LPA.
+- [Digital Marketing & AI Growth](https://academy.smartedgegroup.in/courses/digital-marketing-ai): 3 Months. SEO, SEM, Meta Ads, Generative AI Marketing, Social Media Analytics. Salary: ₹3.5 - ₹7.5 LPA.
+- [Business Automation & RPA](https://academy.smartedgegroup.in/courses/business-automation): 4 Months. Robotic Process Automation, UiPath, Zapier/Make automations, LLM agent pipelines. Salary: ₹5 - ₹10 LPA.
+- [Graphic Designing & UI/UX](https://academy.smartedgegroup.in/courses/graphic-designing): 3 Months. Figma, Adobe Illustrator, Photoshop, Design Systems, UX heuristics. Salary: ₹3.5 - ₹7 LPA.
+- [Power BI & Dashboard Analytics](https://academy.smartedgegroup.in/courses/power-bi): 2.5 Months. Interactive business reporting, DAX measures, Power Query, Data Modeling. Salary: ₹4 - ₹8 LPA.
+- [SQL & Database Engineering](https://academy.smartedgegroup.in/courses/sql-developer): 2 Months. PostgreSQL, MySQL, Database Normalization, Query Optimization, Indexing. Salary: ₹4 - ₹7.5 LPA.
+- [RPA Developer Program](https://academy.smartedgegroup.in/courses/rpa-developer): 3.5 Months. UiPath Studio, Bot Architecture, Enterprise Automation workflows. Salary: ₹5 - ₹9 LPA.
+
+## Software Engineering & Agency Services
+- [Mobile App Development](https://academy.smartedgegroup.in/services/mobile-app-development): Native iOS & Android apps with Flutter, React Native, Swift. Store deployment & backend architecture.
+- [Custom Web Development](https://academy.smartedgegroup.in/services/custom-web-development): Next.js, React, Node.js, enterprise SaaS platforms, high-speed ecommerce, and scalable web apps.
+- [Autonomous AI Agents & Automation](https://academy.smartedgegroup.in/services/ai-automation-agents): Custom LLM agents, LangChain/LlamaIndex integration, automated enterprise workflow bots.
+- [Enterprise Business Automation](https://academy.smartedgegroup.in/services/enterprise-business-automation): RPA bots, CRM integrations, ERP pipeline automations, document intelligence.
+- [Cloud & DevOps Consulting](https://academy.smartedgegroup.in/services/cloud-devops-consulting): AWS / GCP cloud infrastructure, Docker, Kubernetes clusters, zero-downtime CI/CD pipelines.
+- [UI/UX Design & Branding](https://academy.smartedgegroup.in/services/ui-ux-design-branding): Figma design systems, conversion-driven user interfaces, brand identities, and design audits.
+
+## Geographic & Placement Information
+- **Placement Track Record**: 100% placement support record with over 100 hiring partners across Mumbai, Thane, Navi Mumbai, and Pune.
+- **Highest Package**: ₹16 LPA.
+- **Average Package**: ₹5.8 LPA.
+- **Eligibility**: Open to 12th pass, non-IT graduates (B.Com, B.A, B.Sc), engineering graduates (B.E, B.Tech, BCA, MCA), working professionals, and career switchers.
+- **Primary Campus**: Bhiwandi, Thane District, Maharashtra (Serving Bhiwandi, Kalyan, Thane, Dombivli, Ulhasnagar, and Mumbai MMR).

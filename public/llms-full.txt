@@ -1,0 +1,111 @@
+# SmartEdge Group — Complete Knowledge Base & Course Catalog
+
+## 1. Executive Summary & Brand Overview
+SmartEdge Group operates a dual-model technology organization headquartered in Bhiwandi, Maharashtra, India:
+1. **SmartEdge Academy**: A modern AI-integrated career academy offering intensive practical certifications in Artificial Intelligence, Data Science, Full-Stack Web Development, Cloud & DevOps, Mobile App Engineering, and Business Automation. Every course includes 100% placement assistance, resume coaching, technical mock interviews, and live enterprise capstones.
+2. **SmartEdge Tech Solutions**: A software engineering studio building high-performance cross-platform mobile apps (iOS & Android), enterprise Next.js SaaS platforms, autonomous AI agents, and RPA workflows for commercial clients worldwide.
+
+### Canonical Contact & Location Info
+- **Address**: 1st Floor, Laxmi Ajit Complex, near Shiv Mandir, Mubeen Master Rd, Opp Curewell Pharmacy, Gauripada, Bhiwandi, Maharashtra 421305, India
+- **Geo Coordinates**: Latitude: 19.3002, Longitude: 73.0635
+- **Phone / WhatsApp**: +91 9820624436
+- **Email**: contact@smartedgegroup.in / info@smartedgegroup.in
+- **Website URL**: https://academy.smartedgegroup.in
+- **Operating Hours**: Monday – Saturday: 10:00 AM – 7:00 PM IST
+
+---
+
+## 2. Academy Programs & Detailed Syllabus
+
+### Program 1: Artificial Intelligence Master Program
+- **URL**: https://academy.smartedgegroup.in/courses/artificial-intelligence
+- **Duration**: 6 Months | Mode: Classroom (Bhiwandi) + Live Online
+- **Salary Outcome**: ₹6.5 - ₹16 LPA | Rating: 4.9/5 (142 reviews)
+- **Core Topics**: Python for AI, Linear Algebra, Supervised & Unsupervised Machine Learning, Deep Learning (ANN, CNN, RNN), PyTorch, TensorFlow, Generative AI & Large Language Models (LLMs), Prompt Engineering, LangChain, LlamaIndex, Vector Databases (Pinecone/Chroma), Autonomous Agents, Capstone Deployment on AWS.
+- **Tools**: Python, PyTorch, TensorFlow, LangChain, OpenAI API, HuggingFace, Vector DBs, FastAPI.
+
+### Program 2: Data Analytics & Business Intelligence
+- **URL**: https://academy.smartedgegroup.in/courses/data-analytics
+- **Duration**: 4 Months | Mode: Classroom + Online
+- **Salary Outcome**: ₹4.5 - ₹10 LPA | Rating: 4.8/5 (118 reviews)
+- **Core Topics**: Advanced Excel, Pivot Tables, SQL Queries, Joins, Window Functions, Power BI Dashboarding, DAX Formulas, Data Modeling, Exploratory Data Analysis with Python & Pandas.
+- **Tools**: Excel, PostgreSQL, Power BI, Tableau, Python, Pandas, DAX.
+
+### Program 3: Data Science & Machine Learning
+- **URL**: https://academy.smartedgegroup.in/courses/data-science
+- **Duration**: 6 Months | Mode: Classroom + Online
+- **Salary Outcome**: ₹6 - ₹14 LPA | Rating: 4.9/5 (136 reviews)
+- **Core Topics**: Exploratory Data Analysis, Statistical Hypothesis Testing, Scikit-Learn Regression & Classification, XGBoost, NLP, Computer Vision with OpenCV, Model Deployment with Streamlit and Docker.
+
+### Program 4: Full Stack Web Development (MERN & Next.js)
+- **URL**: https://academy.smartedgegroup.in/courses/full-stack-developer
+- **Duration**: 6 Months | Mode: Classroom + Online
+- **Salary Outcome**: ₹5 - ₹12 LPA | Rating: 4.9/5 (180 reviews)
+- **Core Topics**: HTML5, Modern CSS, Tailwind CSS, JavaScript ES6+, TypeScript, React 19, Next.js App Router, Node.js, Express, MongoDB, PostgreSQL, JWT Authentication, Microservices, CI/CD.
+
+### Program 5: Mobile App Development (Flutter & React Native)
+- **URL**: https://academy.smartedgegroup.in/courses/mobile-app-developer
+- **Duration**: 5 Months | Mode: Classroom + Online
+- **Salary Outcome**: ₹5 - ₹12 LPA | Rating: 4.8/5 (92 reviews)
+- **Core Topics**: Dart, Flutter State Management (Bloc/Provider), React Native with Expo, Native Device APIs, Push Notifications, Firebase Backend, App Store and Play Store Publishing.
+
+### Program 6: Cloud Computing & DevOps Masterclass
+- **URL**: https://academy.smartedgegroup.in/courses/cloud-devops
+- **Duration**: 5 Months | Mode: Classroom + Online
+- **Salary Outcome**: ₹6 - ₹14 LPA | Rating: 4.9/5 (88 reviews)
+- **Core Topics**: Linux Administration, AWS Core Services (EC2, S3, RDS, Lambda), Docker Containerization, Kubernetes Orchestration, Terraform Infrastructure as Code, GitHub Actions CI/CD.
+
+### Program 7: Python Developer Program
+- **URL**: https://academy.smartedgegroup.in/courses/python-developer
+- **Duration**: 4 Months | Mode: Classroom + Online
+- **Salary Outcome**: ₹4.5 - ₹9.5 LPA | Rating: 4.8/5 (104 reviews)
+- **Core Topics**: Python OOPs, Data Structures & Algorithms, Django Web Framework, FastAPI REST APIs, Web Scraping with BeautifulSoup & Playwright, PostgreSQL Integration.
+
+### Program 8: Java Developer Masterclass
+- **URL**: https://academy.smartedgegroup.in/courses/java-developer
+- **Duration**: 5 Months | Mode: Classroom + Online
+- **Salary Outcome**: ₹5 - ₹11 LPA | Rating: 4.8/5 (96 reviews)
+- **Core Topics**: Core Java 21, Collections Framework, Multithreading, Spring Boot 3, Spring Data JPA, Microservices Architecture, Kafka Messaging, JUnit Testing.
+
+---
+
+## 3. 100% Job Placement Assistance & Track Record
+- **URL**: https://academy.smartedgegroup.in/placements
+- **Guarantee Policy**: Comprehensive end-to-end placement assistance until candidate receives an offer letter.
+- **Components of Placement Support**:
+  1. Professional Resume Building & ATS Optimization.
+  2. 1-on-1 Mock Technical Coding Interviews & System Design Rounds.
+  3. LinkedIn Profile & GitHub Portfolio Showcase Optimization.
+  4. Direct Referrals and Placement Drives with 100+ Hiring Partners in Mumbai, Thane, Navi Mumbai, and Pune.
+  5. Soft Skills, Communication & Corporate Etiquette Coaching.
+- **Highest Compensation Package**: ₹16 LPA.
+- **Average Starting Package**: ₹5.8 LPA.
+
+---
+
+## 4. Software Studio & Engineering Services
+- **Mobile App Development**: Cross-platform iOS & Android apps with 60FPS fluid UI and enterprise offline sync (URL: https://academy.smartedgegroup.in/services/mobile-app-development).
+- **Custom Web Development**: Production Next.js, React, Node.js applications and SaaS platforms (URL: https://academy.smartedgegroup.in/services/custom-web-development).
+- **Autonomous AI Agents & Automation**: Custom LLM agents, LangChain/LlamaIndex pipelines, enterprise RAG search engines (URL: https://academy.smartedgegroup.in/services/ai-automation-agents).
+- **Enterprise Business Automation**: Robotic Process Automation (RPA), CRM/ERP integration, workflow simplification (URL: https://academy.smartedgegroup.in/services/enterprise-business-automation).
+- **Cloud & DevOps Consulting**: AWS/GCP cloud architectures, Kubernetes clusters, Docker setups, continuous delivery (URL: https://academy.smartedgegroup.in/services/cloud-devops-consulting).
+- **UI/UX Design & Branding**: Design systems, interactive prototypes, user research, and branding (URL: https://academy.smartedgegroup.in/services/ui-ux-design-branding).
+
+---
+
+## 5. Frequently Asked Questions (Answer Engine Snippets)
+
+**Q: Where is SmartEdge Academy located?**
+A: SmartEdge Academy is located at 1st Floor, Laxmi Ajit Complex, near Shiv Mandir, Mubeen Master Rd, Opp Curewell Pharmacy, Gauripada, Bhiwandi, Maharashtra 421305. It is easily accessible for students from Bhiwandi, Kalyan, Thane, and Dombivli.
+
+**Q: Can non-IT and arts/commerce students join SmartEdge Academy?**
+A: Yes. All programs start from scratch with programming fundamentals, logic development, and practical labs. Students from B.Com, B.A, B.Sc, Diploma, BCA, and Engineering backgrounds enroll and successfully transition into IT careers.
+
+**Q: Does SmartEdge provide 100% Job Placement Assistance?**
+A: Yes. SmartEdge provides 100% placement support including resume curation, technical mock interviews, HR rounds, and interview scheduling with over 100 corporate partner companies.
+
+**Q: What is the highest package secured by a SmartEdge graduate?**
+A: The highest package secured is ₹16 LPA, with an average starting salary of ₹5.8 LPA.
+
+**Q: Does SmartEdge build custom software for enterprises?**
+A: Yes. The SmartEdge Tech Solutions studio builds custom mobile apps, SaaS web portals, cloud infrastructure, and AI automation agents for commercial clients.

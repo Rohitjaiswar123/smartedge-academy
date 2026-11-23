@@ -2,15 +2,59 @@ import React from "react";
 import CourseExplorer from "@/components/CourseExplorer";
 import JobAssistanceSection from "@/components/JobAssistanceSection";
 import { Sparkles } from "lucide-react";
+import { COURSES } from "@/data/courses";
+import { getBreadcrumbSchema, SITE_URL } from "@/lib/jsonld";
 
 export const metadata = {
-  title: "All IT & Career Courses in Bhiwandi | SmartEdge Academy",
-  description: "Explore 16+ career-focused courses in AI, Data Science, Full Stack, Python, Java, Digital Marketing, and Cloud with 100% Job Assistance."
+  title: "All IT, AI & Software Courses in Bhiwandi | SmartEdge Academy",
+  description:
+    "Explore 16+ job-guaranteed career courses in AI, Data Science, Full Stack Web Development, Python, Flutter Mobile Apps, Java, Cloud DevOps, and RPA in Bhiwandi with 100% placement support.",
+  alternates: {
+    canonical: "/courses",
+  },
+  openGraph: {
+    title: "All IT & Career Courses in Bhiwandi | SmartEdge Academy",
+    description:
+      "Explore 16+ career-focused courses in AI, Data Science, Full Stack, Python, Java, Digital Marketing, and Cloud with 100% Job Assistance.",
+    url: `${SITE_URL}/courses`,
+  },
 };
 
 export default function CoursesPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Courses", url: "/courses" },
+  ]);
+
+  const courseListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "SmartEdge Academy Career Training Programs",
+    description: "Industry-aligned IT training courses with 100% job placement assistance in Bhiwandi.",
+    itemListElement: COURSES.map((course, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: course.title,
+      url: `${SITE_URL}/courses/${course.slug}`,
+      description: course.tagline,
+    })),
+  };
+
   return (
     <div className="bg-slate-50 dark:bg-slate-950 min-h-screen text-slate-900 dark:text-slate-100 transition-colors">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(courseListSchema),
+        }}
+      />
+
       {/* Header */}
       <div className="relative border-b border-slate-200 dark:border-slate-800 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 py-16 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">

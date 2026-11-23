@@ -21,6 +21,7 @@ import {
 import { COURSES } from "@/data/courses";
 import { AGENCY_SERVICES } from "@/data/services";
 import ThemeToggle from "@/components/ThemeToggle";
+import Logo from "@/components/Logo";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -91,19 +92,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition">
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <div className="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1">
-                SmartEdge <span className="text-blue-600 dark:text-blue-400">Group</span>
-              </div>
-              <p className="text-[10px] text-slate-500 dark:text-slate-400 tracking-wider uppercase font-semibold">
-                AI Academy & Tech Solutions
-              </p>
-            </div>
-          </Link>
+          <Logo href="/" />
 
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
